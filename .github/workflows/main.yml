@@ -26,7 +26,7 @@ jobs:
 
       - name: Ejecutar notebook con Papermill
         run: |
-          papermill notebooks/train_model.ipynb notebooks/output_model.ipynb \
+          papermill notebooks/train.ipynb notebooks/output_model.ipynb \
             -p learning_rate 0.05 \
             -p n_estimators 200
 
