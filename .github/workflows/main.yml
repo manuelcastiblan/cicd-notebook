@@ -27,9 +27,9 @@ jobs:
       - name: Ejecutar notebook con Papermill
         run: |
           papermill notebooks/train.ipynb notebooks/output_model.ipynb \
-            -p learning_rate 0.05 \
-            -p n_estimators 200
-
+          -k python3 \
+          -p learning_rate 0.1 \
+          -p n_estimators 100
       - name: Cargar notebook generado como artefacto
         uses: actions/upload-artifact@v4
         with:
